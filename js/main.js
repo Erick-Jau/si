@@ -21,6 +21,10 @@ var quizTobe;
 var quizWishes;
 var quizT1;
 var quizT2;
+var quizDescribe;
+var quizLondon;
+var quizSituations;
+var quizStudents;
 
 
 function showResults(activeQuiz) {
@@ -384,6 +388,56 @@ window.onload = function () {
         ]);
     }
 
+    if (document.getElementById("quiz-describe") != null) {
+        quizDescribe = new Quiz('quiz-describe', [
+            'b',
+            'b',
+            'b',
+            'c',
+        ]);
+    }
+
+    if (document.getElementById("quiz-london") != null) {
+        quizLondon = new Quiz('quiz-london', [
+            'a',
+            'b',
+            'c',
+            'a',
+            'b',
+            'c',
+        ]);
+    }
+
+    if (document.getElementById("quiz-situations") != null) {
+        quizSituations = new Quiz('quiz-situations', [
+            'b',
+            'b',
+            'a',
+            'b',
+            'a',
+            'b',
+            'a',
+            'b',
+            'a',
+        ]);
+    }
+
+    if (document.getElementById("quiz-students") != null) {
+        quizStudents = new Quiz('quiz-students', [
+            'b',
+            'c',
+            'a',
+            'c',
+            'c',
+            'b',
+            'b',
+            'c',
+            'a',
+            'c',
+            'a',
+            'b',
+        ]);
+    }
 
 };
 

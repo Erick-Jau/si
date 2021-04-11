@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>BEE LEARNER</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="BEE LEARNER">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/bootstrap4/bootstrap.min.css">
+  <link href="/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/main_styles.css">
+  <link rel="stylesheet" type="text/css" href="/responsive.css">
+</head>
+
+<body>
+
+  <div class="super_container">
+
+
+    <nav class="navbar navbar-expand-lg py-3 sticky-top navbar-light bg-white">
+      <a class="navbar-brand pl-0 pl-lg-5 ml-0 ml-lg-5" href="/index">BEE<br>LEARNER</a>
+
+
+
+      <!-- <form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					</form> -->
+  </div>
+  </nav>
+
+
+
+  <!-- <div class="home_background" style="background-image: url(images/index_background.jpg);"></div> -->
+
+  <div class="container mt-3 pt-3">
+    <h1 class="welcome_title mt-4 mb-4"> Please Register</h1>
+    <div class="card">
+      <div class="card-body">
+
+        <form action="/auth/register" method="POST">
+
+          <div class="form-row">
+
+            <div class="form-group col-md-2">
+              <label for="name">School ID</label>
+              <input type="text" class="form-control" id="school_id" name="school_id">
+            </div>
+
+            <div class="form-group col-md-5">
+              <label for="first_name">First Name</label>
+              <input type="text" class="form-control" id="first_name" name="first_name">
+            </div>
+
+            <div class="form-group col-md-5">
+              <label for="last_name">Last Name</label>
+              <input type="text" class="form-control" id="last_name" name="last_name">
+            </div>
+
+          </div>
+
+          <div class="form-row">
+
+            <div class="form-group col-md-4">
+              <label for="group">Group</label>
+              <select class="form-control" id="group" name="group">
+                <option value="1" selected>BIS01M</option>
+                <option value="2">BIS02M</option>
+                <option value="3">BIS03M</option>
+                <option value="4">BIS04M</option>
+              </select>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="opt">OPT Level</label>
+              <select class="form-control" id="opt" name="opt">
+                <option selected>A1</option>
+                <option>A2</option>
+                <option>B1</option>
+                <option>B2</option>
+                <option>C1</option>
+              </select>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="itep">ITEP Level</label>
+              <select class="form-control" id="itep" name="itep">
+                <option selected>None</option>
+                <option>A1</option>
+                <option>A2</option>
+                <option>B1</option>
+                <option>B2</option>
+                <option>C1</option>
+              </select>
+            </div>
+
+          </div>
+
+          <div class="form-row">
+
+            <div class="form-group col-md-6">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" name="password">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="password_confirm">Confirm Password</label>
+              <input type="password" class="form-control" id="password_confirm" name="password_confirm">
+            </div>
+
+          </div>
+
+          {{#if message }}
+          <h4 class="alert alert-danger mt-2">{{message}}</h4>
+          {{/if}}
+          {{#if messageSuccess }}
+          <h4 class="alert alert-success mt-2">{{messageSuccess}}</h4>
+          {{/if}}
+
+          <button class="btn btn-lg btn-primary custom-login btn-block mt-2" type="submit">Register</button>
+
+        </form>
+      </div>
+    </div>
+
+    <div class="col-lg-2 mt-1">
+      <a href="/login" class="btn btn-lg btn-outline-success btn-block mt-2" role="button" aria-disabled="true">Go Back</a>
+    </div>
+  </div>
+
+
+
+
+  <div class="space"></div>
+  <div class="space"></div>
+  <div class="space"></div>
+
+  <footer class="footer">
+    <div class="footer_body">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 footer_col">
+            <div class="newsletter_container d-flex flex-column align-items-start justify-content-end">
+              <div class="footer_logo mb-auto"><a href="#">BEE LEARNER</a></div>
+            </div>
+          </div>
+
+          <div class="col-lg-9 footer_col">
+            <div>
+              <div class="footer_title">Help & Support</div>
+              <ul class="footer_list">
+                <li><a href="#">E-mail</a></li>
+                <li><a href="#">bislearning4@gmail.com</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+
+  <script src="/jquery-3.2.1.min.js"></script>
+  <script src="/bootstrap4/popper.js"></script>
+  <script src="/bootstrap4/bootstrap.min.js"></script>
+  <script src="/easing/easing.js"></script>
+
+</body>
+
+</html>

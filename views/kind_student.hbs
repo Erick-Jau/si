@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>What Kind of Student Are You?</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="BEE LEARNER">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/bootstrap4/bootstrap.min.css">
+    <link href="/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/topic.css">
+    <link rel="stylesheet" type="text/css" href="/topic_responsive.css">
+    <link rel="stylesheet" type="text/css" href="/quizlib.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/quizlib.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/audio.css" media="screen">
+</head>
+
+<body>
+
+    <div class="super_container">
+
+        <nav class="navbar navbar-expand-lg py-3 sticky-top navbar-light bg-white">
+				<a class="navbar-brand pl-0 pl-lg-5 ml-0 ml-lg-5" href="/index">BEE<br>LEARNER</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+		
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mx-auto pr-5">
+						<li class="nav-item">
+							<a class="nav-link" href="/index">Home </a>  
+						</li>
+						<li class="nav-item ">
+							<a class="nav-link" href="/grammar">Grammar</a>
+						</li>
+						<li class="nav-item ">
+							<a class="nav-link" href="/reading">Reading</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="/listening">Listening</a>
+						</li>
+						<li class="nav-item ">
+							<a class="nav-link" href="/writing">Writing</a>
+						</li>
+						<li class="nav-item ">
+							<a class="nav-link" href="/speaking">Speaking</a>
+						</li>
+						
+					</ul>
+					<div class="dropdown-divider"></div>
+					<ul class="navbar-nav pr-5 mr-5">
+						<li class="nav-item">
+							<a class="nav-link" href="/auth/logout">Log Out</a>  
+						</li>
+					</ul>
+		
+					<!-- <form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					</form> -->
+				</div>
+			</nav><br>
+
+
+
+
+
+
+
+
+        <div class="title">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="grammar_title"><a href="/listening">Listening</a><a href="/listening_b2"> /
+                                B2</a>
+                            / What Kind of Student Are You?</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space"></div>
+
+        <div class="course">
+            <div class="course_top"></div>
+            <div class="container">
+                <div class="row row-lg-eq-height">
+
+                    <div class="col-lg-10">
+                        <div class="tab_panels">
+
+
+                            <div class="course_tabs_container">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-9 ">
+                                            <div class="tabs d-flex flex-row align-items-center justify-content-start">
+                                                <div class="tab active">Listening Exercise</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+
+                            <div class="tab_panel description active">
+
+                                <div class="cur_title_container d-flex flex-row align-items-start justify-content-start">
+                                    <div class="cur_title">Listen to the next audio and answer the questions.
+                                    </div>
+                                </div><br>
+                                
+                                    <div class="audio-container">
+                                        <div class="audio-player" onclick="toggleAudio()">
+                                            <audio preload="metadata" controls controlslist="nodownload">
+                                                <source
+                                                    src="/B2.mpeg"
+                                                    type="audio/mpeg">
+                                                Your browser does not support the audio tag.
+                                            </audio>
+                                            <div class="play-button">Listen <span class="duration">4:06</span></div>
+                                        </div>
+                                    </div><br>
+
+                                <div id="quiz-students">
+
+                                    <div class="card quizlib-question">
+                                        <div class="quizlib-question-title">1. At the beginning the teacher asks the students to think carefully about …</div>
+                                        <div class="quizlib-question-answers">
+                                            <ul>
+                                                <li><label><input type="radio" name="q1" value="a"> the questions.</label></li>
+                                                <li><label><input type="radio" name="q1" value="b"> their answers.</label></li>
+                                                <li><label><input type="radio" name="q1" value="c"> where they sit.</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card quizlib-question">
+                                        <div class="quizlib-question-title">2. The answers the students choose will be seen by ...</div>
+                                        <div class="quizlib-question-answers">
+                                            <ul>
+                                                <li><label><input type="radio" name="q2" value="a"> the other students.</label></li>
+                                                <li><label><input type="radio" name="q2" value="b"> the teacher.</label></li>
+                                                <li><label><input type="radio" name="q2" value="c"> nobody.</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card quizlib-question">
+                                        <div class="quizlib-question-title">3. The first question is about the time ...</div>
+                                        <div class="quizlib-question-answers">
+                                            <ul>
+                                                <li><label><input type="radio" name="q3" value="a"> students arrive at school.</label></li>
+                                                <li><label><input type="radio" name="q3" value="b"> students spend at school.</label></li>
+                                                <li><label><input type="radio" name="q3" value="c"> students leave.</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card quizlib-question">
+                                        <div class="quizlib-question-title">4. The teacher asks about …</div>
+                                        <div class="quizlib-question-answers">
+                                            <ul>
+                                                <li><label><input type="radio" name="q4" value="a"> where students do their homework.</label></li>
+                                                <li><label><input type="radio" name="q4" value="b"> how much time students spend doing their homework.</label></li>
+                                                <li><label><input type="radio" name="q4" value="c"> when the students do their homework.</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card quizlib-question">
+                                        <div class="quizlib-question-title">5. In question three, students who normally get half marks or less in tests should answer ...</div>
+                                        <div class="quizlib-question-answers">
+                                            <ul>
+                                                <li><label><input type="radio" name="q5" value="a"> A.</label></li>
+                                                <li><label><input type="radio" name="q5" value="b"> B.</label></li>
+                                                <li><label><input type="radio" name="q5" value="c"> C.</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card quizlib-question">
+                                        <div class="quizlib-question-title">6. Question four is about the students’ relationship with …</div>
+                                        <div class="quizlib-question-answers">
+                                            <ul>
+                                                <li><label><input type="radio" name="q6" value="a"> people in their lives outside school.</label></li>
+                                                <li><label><input type="radio" name="q6" value="b"> people working at the school.</label></li>
+                                                <li><label><input type="radio" name="q6" value="c"> people studying at the school.</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card quizlib-question">
+                                        <div class="quizlib-question-title">7. The teacher thinks some students prefer to sit in the middle of the class so that ...</div>
+                                        <div class="quizlib-question-answers">
+                                            <ul>
+                                                <li><label><input type="radio" name="q7" value="a"> they can hear the teacher without being right at the front.</label></li>
+                                                <li><label><input type="radio" name="q7" value="b"> they can have pleasant thoughts without following the lesson.</label></li>
+                                                <li><label><input type="radio" name="q7" value="c"> no one will notice them using their phones.</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card quizlib-question">
+                                        <div class="quizlib-question-title">8. Question six is about students' ...</div>
+                                        <div class="quizlib-question-answers">
+                                            <ul>
+                                                <li><label><input type="radio" name="q8" value="a"> exam results.</label></li>
+                                                <li><label><input type="radio" name="q8" value="b"> future career.</label></li>
+                                                <li><label><input type="radio" name="q8" value="c"> plans for the future.</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card quizlib-question">
+                                        <div class="quizlib-question-title">9. Students with mostly As have a good …</div>
+                                        <div class="quizlib-question-answers">
+                                            <ul>
+                                                <li><label><input type="radio" name="q9" value="a"> attitude towards studying.</label></li>
+                                                <li><label><input type="radio" name="q9" value="b"> idea about what they want to do in the future.</label></li>
+                                                <li><label><input type="radio" name="q9" value="c"> network of support at school.</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card quizlib-question">
+                                        <div class="quizlib-question-title">10. Students with mostly Bs need to …</div>
+                                        <div class="quizlib-question-answers">
+                                            <ul>
+                                                <li><label><input type="radio" name="q10" value="a"> become excellent students.</label></li>
+                                                <li><label><input type="radio" name="q10" value="b"> increase the time they spend studying.</label></li>
+                                                <li><label><input type="radio" name="q10" value="c"> change some of their habits.</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card quizlib-question">
+                                        <div class="quizlib-question-title">11. Students with mostly Cs are probably ...</div>
+                                        <div class="quizlib-question-answers">
+                                            <ul>
+                                                <li><label><input type="radio" name="q11" value="a"> wasting a lot of their time.</label></li>
+                                                <li><label><input type="radio" name="q11" value="b"> unable to do any better.</label></li>
+                                                <li><label><input type="radio" name="q11" value="c"> going to be unemployed in the future.</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card quizlib-question">
+                                        <div class="quizlib-question-title">12. Students with mostly Cs should ...</div>
+                                        <div class="quizlib-question-answers">
+                                            <ul>
+                                                <li><label><input type="radio" name="q12" value="a"> join the homework club.</label></li>
+                                                <li><label><input type="radio" name="q12" value="b"> try to change as soon as possible.</label></li>
+                                                <li><label><input type="radio" name="q12" value="c"> leave school at the first opportunity.</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div id="quiz-result" class="card">
+                                        You Scored <span id="quiz-percent"></span>% - <span
+                                            id="quiz-score"></span>/<span id="quiz-max-score"></span><br />
+                                    </div>
+
+                                    <center><button type="button" onclick="showResults(quizStudents);">Check
+                                            Answers</button>
+                                    </center>
+                                </div>
+
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-2">
+                        <div class="sidebar">
+                            <div class="sidebar_background"></div>
+                            <div class="sidebar_top">Listening - B2</div>
+                            <div class="sidebar_content">
+
+                                <br><br><br>
+
+                                <div class="like_item ">
+                                    <div class="like_title_container">
+                                        <div class="topic_title"> What Kind of Student Are You?
+                                        </div>
+                                    </div><br>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="footer_body">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 footer_col">
+                        <div class="newsletter_container d-flex flex-column align-items-start justify-content-end">
+                            <div class="footer_logo mb-auto"><a href="#">BEE LEARNER</a></div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-9 footer_col ">
+                        <div>
+                            <div class="footer_title">Help & Support</div>
+                            <ul class="footer_list">
+                                <li><a href="#">E-mail</a></li>
+                                <li><a href="#">bislearning4@gmail.com</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <script src="/jquery-3.2.1.min.js"></script>
+    <script src="/bootstrap4/popper.js"></script>
+    <script src="/bootstrap4/bootstrap.min.js"></script>
+    <script src="/easing/easing.js"></script>
+    <script src="/parallax-js-master/parallax.min.js"></script>
+
+    <script src="/course.js"></script>
+    <script src="/audio.js"></script>
+    <script type="text/javascript" src="/quizlib.1.0.1.min.js"></script>
+    <script type="text/javascript" src="/quizlib.js"></script>
+    <script type="text/javascript" src="/main.js"></script>
+</body>
+
+</html>

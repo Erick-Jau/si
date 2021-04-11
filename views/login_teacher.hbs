@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BEE LEARNER</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="BEE LEARNER">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/bootstrap4/bootstrap.min.css">
+    <link href="/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="/responsive.css">
+</head>
+
+<body>
+
+    <div class="super_container">
+
+
+        <nav class="navbar navbar-expand-lg py-3 sticky-top navbar-light bg-white">
+            <a class="navbar-brand pl-0 pl-lg-5 ml-0 ml-lg-5" href="/index">BEE<br>LEARNER</a>
+
+
+
+            <!-- <form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					</form> -->
+    </div>
+    </nav>
+
+
+
+    <!-- <div class="home_background" style="background-image: url(images/index_background.jpg);"></div> -->
+    <div class="home_login">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 welcome_title mt-2">
+                    <h1 class="welcome_title"> WELCOME TO BEE LEARNER</h1><br>
+
+                    <p class="mb-1">Take Your Knowledge to the Next Level!</p>
+
+                </div>
+                <div class="col-lg-6 login mt-4">
+                    <form class="form-signin" action="/auth/loginAdmin" method="POST">
+
+                        <h1 class="h3 mb-3 mt-3">Teacher Sign In</h1>
+
+                        <label for="school_id" class="sr-only">School ID</label>
+                        <input type="text" class="form-control mt-2" placeholder="School ID" id="school_id"
+                            name="school_id">
+
+                        <label for="password" class="sr-only">Password</label>
+                        <input type="password" class="form-control mt-2" placeholder="Password" id="password"
+                            name="password">
+
+                        {{#if message }}
+                        <h5 class="alert alert-danger mt-2">{{message}}</h5>
+                        {{/if}}
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <button class="btn btn-lg btn-primary custom-login btn-block mt-2" type="submit">Sign
+                                    in</button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 "><a href="/test" class="btn btn-lg btn-outline-success btn-block mt-2"
+                                    role="button" aria-disabled="true">Register</a></div>
+                            <div class="col-lg-6 "><a href="/login"
+                                    class="btn btn-lg btn-outline-secondary btn-block mt-2" role="button"
+                                    aria-disabled="true">I'm a Student</a></div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+
+    <footer class="footer">
+        <div class="footer_body">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 footer_col">
+                        <div class="newsletter_container d-flex flex-column align-items-start justify-content-end">
+                            <div class="footer_logo mb-auto"><a href="#">BEE LEARNER</a></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-9 footer_col">
+                        <div>
+                            <div class="footer_title">Help & Support</div>
+                            <ul class="footer_list">
+                                <li><a href="#">E-mail</a></li>
+                                <li><a href="#">bislearning4@gmail.com</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <script src="/jquery-3.2.1.min.js"></script>
+    <script src="/bootstrap4/popper.js"></script>
+    <script src="/bootstrap4/bootstrap.min.js"></script>
+    <script src="/easing/easing.js"></script>
+
+</body>
+
+</html>
+
+
+{{!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <h4>Node MySQL</h4>
+        <ul>
+            <li><a href="/">Home</a></li>
+            {{#if user }}
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/auth/logout">Logout</a></li>
+            {{else}}
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="jumbotron">
+            <h1 class="display-4">Login Project</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
+                to
+                featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+</body>
+
+</html> --}}

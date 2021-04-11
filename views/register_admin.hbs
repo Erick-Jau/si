@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Poppins:300,400,500,600,700,800,900"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="/sb-admin-2.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/index_admin">
+
+                <div class="sidebar-brand-text mx-3">BEE<br>LEARNER</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item mt-1">
+                <a class="nav-link" href="/index_admin">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Admin
+            </div>
+
+            <!-- Nav Item - Tables -->
+
+            <li class="nav-item active">
+                <a class="nav-link" href="/register_admin">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Register</span></a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto col-xs">
+
+
+                        <li class="nav-item mt-2">
+                            <a class="nav-link" style="color: black;" href="/auth/logout">Log Out</a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-900">Admin</h1>
+
+                    </div>
+
+                    <!-- Content Row -->
+
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="container mt-3">
+                                <h1 class="welcome_title mt-4 mb-4" style="color: black;"> Teacher Register</h1>
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <form action="/auth/registerAdmin" method="POST">
+
+                                            <div class="form-row">
+
+                                                <div class="form-group col-md-2">
+                                                    <label for="name">School ID</label>
+                                                    <input type="text" class="form-control" id="school_id"
+                                                        name="school_id">
+                                                </div>
+
+                                                <div class="form-group col-md-5">
+                                                    <label for="first_name">First Name</label>
+                                                    <input type="text" class="form-control" id="first_name"
+                                                        name="first_name">
+                                                </div>
+
+                                                <div class="form-group col-md-5">
+                                                    <label for="last_name">Last Name</label>
+                                                    <input type="text" class="form-control" id="last_name"
+                                                        name="last_name">
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-row">
+
+                                                <div class="form-group col-md-4">
+                                                    <label for="group">Group Assignted</label>
+                                                    <select class="form-control" id="group" name="group">
+                                                        <option value="1" selected>BIS01M</option>
+                                                        <option value="2">BIS02M</option>
+                                                        <option value="3">BIS03M</option>
+                                                        <option value="4">BIS04M</option>
+                                                    </select>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="form-row">
+
+                                                <div class="form-group col-md-6">
+                                                    <label for="password">Password</label>
+                                                    <input type="password" class="form-control" id="password"
+                                                        name="password">
+                                                </div>
+
+                                                <div class="form-group col-md-6">
+                                                    <label for="password_confirm">Confirm Password</label>
+                                                    <input type="password" class="form-control" id="password_confirm"
+                                                        name="password_confirm">
+                                                </div>
+
+                                            </div>
+
+                                            {{#if message }}
+                                                <h4 class="alert alert-danger mt-2">{{message}}</h4>
+                                            {{/if}}
+
+                                            {{#if messageSuccess }}
+                                                <h4 class="alert alert-success mt-2">{{messageSuccess}}</h4>
+                                            {{/if}}
+
+                                            <button class="btn btn-lg btn-primary custom-login btn-block mt-2"
+                                                type="submit">Register</button>
+
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; BEE LEARNER 2021</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
